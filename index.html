@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Adepegba David">
+    <meta name="description"
+        content="This assignment allows you to demonstrate your prerequisite knowledge by applying HTML and CSS in the design and development of a home page. In addition, you will need to apply learning activity concepts – including JavaScript – to provide some dynamic information to the home page.">
+    <title>WDD 131 - Dynamic Web Fundamentals - Adepegba David</title>
+    <!-- fonts and stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Smythe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <!-- JavaScript -->
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <span id="course-title">WDD 131: Dynamic Web Fundamentals - Adepegba David</span>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7"
+                target="_blank">Scripture</a>
+            <a href="#">Final Project</a>
+
+        </nav>
+    </header>
+    <main>
+        <!-- <h1>Adepegba David</h1> -->
+        <section class="card left-side">
+
+            <h2>About Me</h2>
+            <div id="about-me">
+                <p>Hi, I'm David Adepegba (David for short)! I'm a Software Development student at Brigham Young
+                    University-Idaho (BYU-Idaho), with a passion for learning and collaborating. Born and raised in
+                    Lagos, Nigeria, I'm excited to connect with like-minded individuals and further develop my skills
+                </p>
+                <img src="images/profile.jpg" alt="profile photo">
+            </div>
+
+
+            <h3>Lagos, Nigeria</h3>
+            <div id="nigeria">
+                <figure>
+                    <img src="images/nigeria-flag.png" alt="Nigeria flag">
+                    <figcaption><i>Offical flag of Nigeria</i></figcaption>
+                </figure>
+
+                <p>Nigeria is a vibrant West African nation known for its rich cultural heritage and diverse ethnic
+                    groups.
+                    With over 200 million people, it's one of Africa's most populous countries, boasting a dynamic
+                    economy
+                    and a growing tech industry. From its stunning natural landscapes to its lively music and film
+                    scenes,
+                    Nigeria is a country that embodies resilience, creativity, and warmth.</p>
+
+            </div>
+        </section>
+        <section class="card right-side">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+                <li><a href="https://www.smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
+                <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
+                <li><a href="https://www.w3schools.com" target="_blank">W3 Schools</a></li>
+                <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
+                <li><a href="https://placeholder.com" target="_blank">Image Placeholder</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 🌺Adepegba David 🌺 Nigeria</p>
+        <p id="currentyear"></p>
+        <p id="full"></p>
+    </footer>
+</body>
+
+</html>

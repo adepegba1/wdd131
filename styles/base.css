@@ -1,0 +1,114 @@
+:root{
+    --primary-color: #050505;
+    --secondary-color: #3bcbe8;
+    --heading-font: Lobster, Arial, Helvetica, sans-serif;
+    --body-font: Smythe;
+}
+*{
+    margin: 0 auto;
+    padding: 0;
+    
+}
+header, main, body{
+    color: var(--primary-color);
+    box-sizing: border-box;
+    max-width: 840px;    
+}
+/* header */
+#course-title{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-family: var(--heading-font);
+    padding: 7px;
+    font-size: 24px;
+    display: block;
+    text-align: center;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    
+}
+nav a{
+    text-decoration: none;
+    padding: 7px;
+    color: white;
+}
+nav a:hover{
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* main section */
+main{
+    display: grid;
+    grid-template-columns: 10fr 5fr;
+}
+h2{
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    font-family: var(--heading-font);
+    text-align: center;
+    padding: 5px;
+}
+section{
+    border: 1px solid black;
+    margin: 5px;
+    border-radius: 7px;
+}
+#about-me, #nigeria{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+#about-me img, #nigeria img{
+    max-width: 150px;
+    height: auto;
+    border-radius: 5px;
+    
+
+}
+h3{
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding-bottom: 5px;
+}
+p{
+    font-family: var(--body-font);
+    font-size: 24px;
+    margin: 3px;
+    padding: 2px
+}
+ul{
+    margin: 100px 0 100px 50px;
+}
+li a{
+    font-family: var(--body-font);
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+}
+li a:hover{
+    text-decoration: underline;
+    color: var(--secondary-color);
+    
+}
+
+/* footer */
+footer{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+footer p{
+    text-align: center;
+}
+#currentyear{
+    color: yellow;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
