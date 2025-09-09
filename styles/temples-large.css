@@ -4,17 +4,21 @@
     align-items: center;
     justify-content: space-between;
   }
+
   .navigation {
     justify-content: flex-end;
     flex-direction: row;
   }
+
   .navigation a {
-    flex: 1 1 100%;
-    display: flex;
+    flex: 1 1 auto;
+    display: block;
   }
+
   main {
     max-width: 800px;
   }
+
   #menu {
     display: none; /* hide hamburger button */
   }
