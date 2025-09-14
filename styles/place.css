@@ -1,0 +1,151 @@
+:root {
+  --primary-color: #09ecdd;
+  --secondary-color: #121317;
+  --heading-font: Rye, Arial, Helvetica, sans-serif;
+  --body-font: "Stardos Stencil", Verdana, Geneva, Tahoma, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+header,
+footer {
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: var(--heading-font);
+  padding: 20px;
+  width: 100%;
+}
+h1 {
+  font-size: 50px;
+}
+.hero-section {
+  width: 100%;
+  position: relative;
+  padding-top: 20px;
+}
+.hero {
+  background-color: var(--secondary-color);
+  padding-top: 20px;
+  position: relative;
+}
+.data,
+.weather {
+  position: relative;
+  padding-bottom: 20px;
+}
+h2 {
+  font-family: var(--heading-font);
+  padding: 20px;
+  text-align: center;
+}
+table {
+  margin: 0 auto;
+  text-align: left;
+  color: var(--secondary-color);
+  font-family: var(--body-font);
+}
+.weather img {
+  width: 10%;
+  height: auto;
+}
+.weather-icon {
+  margin: 10px auto 0 auto;
+  display: block;
+}
+.table-data {
+  text-align: right;
+  font-weight: bolder;
+}
+td {
+  padding: 5px 5px;
+}
+.title .weather-icon {
+  display: none;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+}
+.hero-section::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--secondary-color);
+}
+.data::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ced4da; /* Faint line between data and weather */
+  opacity: 0.5; /*Faint effect */
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    margin: 0;
+    position: relative;
+    display: block;
+    text-align: left;
+  }
+  .hero img {
+    width: 100%;
+    height: auto;
+  }
+  .hero-section {
+    margin-top: 20px;
+    padding: 0;
+  }
+  .title {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    text-align: left;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-right: 50px;
+  }
+  .title .weather-icon {
+    display: inline-block;
+    font-size: 1rem;
+  }
+  .mobile {
+    display: none;
+  }
+  .data,
+  .weather {
+    position: absolute;
+    padding: 0 0 20px 0;
+    background-color: aliceblue;
+  }
+  .data {
+    top: 15%;
+    left: 2%;
+    width: auto;
+    height: auto;
+  }
+  .weather {
+    bottom: 5%;
+    right: 2%;
+    width: auto;
+    height: auto;
+  }
+  table {
+    padding-top: 15px;
+  }
+}

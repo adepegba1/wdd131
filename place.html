@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Adepegba David">
+    <meta name="description"
+        content="Develop responsive web pages that follow best practices and use valid HTML and CSS, demonstrate proficiency with JavaScript language syntax, use JavaScript to respond to events and dynamically modify HTML.">
+    <title>WDD 131 - Country Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Stardos+Stencil:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1 class="header-title">Barcelona, Spain</h1>
+        </header>
+        <div class="hero-section">
+            <picture class="hero">
+                <source srcset="images/barcelona-spain.webp" media="(min-width: 1000px)">
+                <img src="images/small-view.webp" alt="Barcelona, Spain">
+            </picture>
+        </div>
+        <div class="data">
+            <h2 class="title">Data</h2>
+            <table>
+                <tr>
+                    <td class="table-data">Area: </td>
+                    <td>101.4 km<sup>2</sup></td>
+                </tr>
+                <tr>
+                    <td class="table-data">Population: </td>
+                    <td>1,686,208</td>
+                </tr>
+                <tr>
+                    <td class="table-data">Capital: </td>
+                    <td>Catalonia</td>
+                </tr>
+                <tr>
+                    <td class="table-data">Languages: </td>
+                    <td>Catalan and Spainsh</td>
+                </tr>
+                <tr>
+                    <td class="table-data">Currency: </td>
+                    <td>Euro</td>
+                </tr>
+                <tr>
+                    <td class="table-data">Time Zone: </td>
+                    <td>GMT +2</td>
+                </tr>
+                <tr>
+                    <td class="table-data">Calling code: </td>
+                    <td>+34</td>
+                </tr>
+                <tr>
+                    <td class="table-data">Internet TLD: </td>
+                    <td>.bcn</td>
+                </tr>
+            </table>
+        </div>
+        <div class="weather">
+            <h2 class="title">Weather <span class="weather-icon">&#9925;</span></h2>
+            <img src="images/weather-icon.svg" alt="Weather Icon" class="weather-icon mobile">
+            <table>
+                <tr>
+                    <td class="table-data">Temperature: </td>
+                    <td>10 <sup>o</sup>C</td>
+                </tr>
+                <tr>
+                    <td class="table-data">Conditions: </td>
+                    <td>Partly Cloudy</td>
+                </tr>
+                <tr>
+                    <td class="table-data">Wind: </td>
+                    <td>5 km/h</td>
+                </tr>
+                <tr>
+                    <td class="table-data">Wind Chill: </td>
+                    <td id="windchill"></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;2025 ✨Adepegba David✨ Nigeria</p>
+        <p id="currentyear"></p>
+    </footer>
+
+
+</body>
+
+</html>
