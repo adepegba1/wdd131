@@ -77,14 +77,6 @@ const temples = [
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg",
   },
   {
-    templeName: "Aba Nigeria",
-    location: "Aba, Nigeria",
-    dedicated: "2005, August, 7",
-    area: 11500,
-    imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/aba-nigeria-temple/aba-nigeria-temple-5087-main.jpg",
-  },
-  {
     templeName: "Accra Ghana",
     location: "Accra, Ghana",
     dedicated: "2004, January, 11",
@@ -116,5 +108,178 @@ const temples = [
     imageUrl:
       "https://churchofjesuschristtemples.org/assets/img/temples/lagos-nigeria-temple/lagos-nigeria-temple-58577-main.jpg",
   },
-  // Add more temple objects here...
 ];
+
+// CreateTemplecard(temples);
+
+// const oldLink = document.querySelector("#old");
+
+// oldLink.addEventListener("click", () => {
+//   CreateTemplecard(
+//     temples.filter((temple) => {
+//       // Convert the dedicated string into a Date object
+//       const dedicatedDate = new Date(temple.dedicated);
+//       return dedicatedDate.getFullYear() < 1900;
+//     })
+//   );
+// });
+// const homeLink = document.querySelector("#home");
+
+// homeLink.addEventListener("click", () => {
+//   CreateTemplecard(temples);
+// });
+// const newLink = document.querySelector("#new");
+
+// newLink.addEventListener("click", () => {
+//   CreateTemplecard(
+//     temples.filter((temple) => {
+//       // Convert the dedicated string into a Date object
+//       const dedicatedDate = new Date(temple.dedicated);
+//       // Only keep temples dedicated after 2000
+//       return dedicatedDate.getFullYear() > 2000;
+//     })
+//   );
+// });
+
+// const largeLink = document.querySelector("#large");
+
+// largeLink.addEventListener("click", () => {
+//   CreateTemplecard(temples.filter((temple) => temple.area > 90000));
+// });
+
+// const smallLink = document.querySelector("#small");
+
+// smallLink.addEventListener("click", () => {
+//   CreateTemplecard(temples.filter((temple) => temple.area < 10000));
+// });
+
+// function CreateTemplecard(filteredTemples) {
+//   document.querySelector(".temple-image").innerHTML = "";
+//   filteredTemples.forEach((temple) => {
+//     let card = document.createElement("section");
+//     let name = document.createElement("h2");
+//     let location = document.createElement("p");
+//     let dedicated = document.createElement("p");
+//     let area = document.createElement("p");
+//     let image = document.createElement("img");
+
+//     card.setAttribute("class", "temple-card");
+//     name.textContent = temple.templeName;
+//     location.innerHTML = `<span class=label>LOCATION: </span>${temple.location}`;
+//     dedicated.innerHTML = `<span class=label>DEDICATED: </span>${temple.dedicated}`;
+//     area.innerHTML = `<span class=label>AREA: </span>${temple.area} sq ft`;
+//     image.setAttribute("src", temple.imageUrl);
+//     image.setAttribute("alt", `${temple.templeName} Temple`);
+//     image.setAttribute("loading", "lazy");
+
+//     card.appendChild(name);
+//     card.appendChild(location);
+//     card.appendChild(dedicated);
+//     card.appendChild(area);
+//     card.appendChild(image);
+
+//     document.querySelector(".temple-image").appendChild(card);
+//   });
+// }
+
+// Call the function at the beginning to display all temples by default
+CreateTemplecard(temples);
+
+// Get the "Old" link element from the HTML using its ID
+const oldLink = document.querySelector("#old");
+
+// Add an event listener so when the "Old" link is clicked, it runs this code
+oldLink.addEventListener("click", () => {
+  // Call the function but only with temples dedicated before the year 1900
+  CreateTemplecard(
+    temples.filter((temple) => {
+      // Convert the temple's dedicated string into a Date object
+      const dedicatedDate = new Date(temple.dedicated);
+      // Keep only temples where the year is before 1900
+      return dedicatedDate.getFullYear() < 1900;
+    })
+  );
+});
+
+// Get the "Home" link element
+const homeLink = document.querySelector("#home");
+
+// Add an event listener so when the "Home" link is clicked, show all temples
+homeLink.addEventListener("click", () => {
+  CreateTemplecard(temples);
+});
+
+// Get the "New" link element
+const newLink = document.querySelector("#new");
+
+// Add an event listener so when the "New" link is clicked, run this code
+newLink.addEventListener("click", () => {
+  // Call the function but only with temples dedicated after the year 2000
+  CreateTemplecard(
+    temples.filter((temple) => {
+      // Convert the temple's dedicated string into a Date object
+      const dedicatedDate = new Date(temple.dedicated);
+      // Keep only temples where the year is greater than 2000
+      return dedicatedDate.getFullYear() > 2000;
+    })
+  );
+});
+
+// Get the "Large" link element
+const largeLink = document.querySelector("#large");
+
+// Add an event listener so when the "Large" link is clicked, run this code
+largeLink.addEventListener("click", () => {
+  // Show only temples with an area larger than 90,000 sq ft
+  CreateTemplecard(temples.filter((temple) => temple.area > 90000));
+});
+
+// Get the "Small" link element
+const smallLink = document.querySelector("#small");
+
+// Add an event listener so when the "Small" link is clicked, run this code
+smallLink.addEventListener("click", () => {
+  // Show only temples with an area smaller than 10,000 sq ft
+  CreateTemplecard(temples.filter((temple) => temple.area < 10000));
+});
+
+// Function that creates and displays temple "cards"
+function CreateTemplecard(filteredTemples) {
+  // Clear out anything already inside the ".temple-image" container
+  document.querySelector(".temple-image").innerHTML = "";
+
+  // Loop through each temple passed into the function
+  filteredTemples.forEach((temple) => {
+    // Create HTML elements for the card
+    let card = document.createElement("section");
+    let name = document.createElement("h2");
+    let location = document.createElement("p");
+    let dedicated = document.createElement("p");
+    let area = document.createElement("p");
+    let image = document.createElement("img");
+
+    // Add a class to the card for styling with CSS
+    card.setAttribute("class", "temple-card");
+
+    // Fill in the text and values for each piece of info
+    name.textContent = temple.templeName;
+    location.innerHTML = `<span class=label>LOCATION: </span>${temple.location}`;
+    dedicated.innerHTML = `<span class=label>DEDICATED: </span>${temple.dedicated}`;
+    area.innerHTML = `<span class=label>AREA: </span>${temple.area} sq ft`;
+
+    // Set up the image with the temple picture
+    image.setAttribute("src", temple.imageUrl);
+    image.setAttribute("alt", `${temple.templeName} Temple`);
+    image.setAttribute("loading", "lazy"); // Lazy loading improves performance
+
+    // Add all the elements into the card
+    card.appendChild(name);
+    card.appendChild(location);
+    card.appendChild(dedicated);
+    card.appendChild(area);
+    card.appendChild(image);
+
+    // Finally, add the finished card into the ".temple-image" container on the page
+    document.querySelector(".temple-image").appendChild(card);
+  });
+}
