@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Adepegba David">
+    <meta name="description" content="This is a confirmation page for the form submission page">
+    <title>Review Product </title>
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>Thank you for your review!</h1>
+    <p>Number of reviews completed:
+        <span id="count-review"></span>
+    </p>
+    <p>Please close this page</p>
+    <script>
+        // Get a reference to the HTML element with the id "count-review"
+        const VisitCount = document.getElementById("count-review");
+
+        // Retrieve the value of "Review-number" from localStorage, convert it to a number
+        // If nothing is found (null), default to 0
+        let numVisit = Number(localStorage.getItem("Review-number")) || 0;
+
+        // Check if this is not the first visit
+        if (numVisit !== 0) {
+            // If user has visited before, display the number of visits
+            VisitCount.textContent = numVisit + 1;
+        } else {
+            // If it's the very first visit, display a special message
+            VisitCount.textContent = 'This is your first review';
+        }
+
+        // Increase the visit count by 1 for the next visit
+        numVisit++;
+
+        // Save the updated number of visits back into localStorage
+        localStorage.setItem("Review-number", numVisit);
+    </script>
+
+</body>
+
+</html>
