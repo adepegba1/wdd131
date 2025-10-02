@@ -1,0 +1,41 @@
+:root {
+  /* color-scheme */
+  --HF-Background: #ffffe1;
+  --Main-Background: #e6f3fe;
+  --M-Text: #5c1e51;
+  --HF-Text: #5c341e;
+  /* font-family */
+  --HF-heading: "Bungee Spice", Arial, Helvetica, sans-serif;
+  --HF-paragraph: "Rozha One", "Segoe UI", Tahoma;
+  --M-heading: "Saira Stencil One", Geneva, Verdana, sans-serif;
+  --M-paragraph: "Alan Sans", "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode";
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--HF-Background);
+}
+h1 {
+  font-family: var(--HF-heading);
+  flex: 2;
+  font-size: 40px;
+  color: var(--HF-Text);
+}
+header img {
+  width: 70px;
+  height: auto;
+}
+main {
+  background-color: var(--Main-Background);
+  color: var(--M-Text);
+}
+
+@media (min-width: 500px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+}
