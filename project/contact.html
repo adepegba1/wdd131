@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Bungee+Spice&family=Rozha+One&family=Saira+Stencil+One&display=swap"
+        rel="stylesheet">
+
+    <!-- css link -->
+    <link rel="stylesheet" href="styles/index.css">
+
+    <!-- javascript -->
+    <script src="scripts/index.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.svg" alt="Logo">
+            <h1>Adepegba<br>David</h1>
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Contact Information</h2>
+        <h2>Address</h2>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Send a Message</legend>
+                <label for="name">Full Name</label>
+                <input type="text" name="name" id="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="subject">Subject of the message</label>
+                <select name="subject" id="subject">
+                    <option value="" required disabled selected>select option</option>
+                    <option value="sql">SQL</option>
+                    <option value="Excel">Mircosoft Excel</option>
+                    <option value="PowerBi">Power Bi</option>
+                    <option value="Python">Python</option>
+                </select>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message"></textarea>
+
+                <input type="submit" value="Send Message">
+
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <div class="social-media"></div>
+        <div>
+            <p id="currentyear"></p>
+            <p id="last-modified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
