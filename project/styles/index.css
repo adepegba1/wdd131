@@ -77,9 +77,13 @@ main {
   gap: 10px;
   padding: 5px;
 }
-h2,
+.about-me h2,
 h3 {
   text-align: center;
+  font-family: var(--M-heading);
+}
+h2 {
+  font-family: var(--M-heading);
 }
 section {
   padding-top: 10px;
@@ -110,6 +114,60 @@ footer {
   color: var(--HF-Text);
   font-family: var(--HF-paragraph);
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.social-media img {
+  width: 40px;
+  height: auto;
+}
+
+/* ====== CONTACT PAGE =====  */
+
+.send-message fieldset {
+  font-family: var(--M-heading);
+  margin: 2rem 0;
+  border-radius: 6px;
+  padding: 0.5rem 2%;
+  border: 1px solid black;
+}
+.send-message label {
+  display: block;
+  padding-top: 20px;
+  font-size: 16px;
+}
+.send-message input[type="text"],
+.send-message input[type="email"],
+.send-message select,
+.send-message textarea {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: var(--M-paragraph);
+  font-size: 16px;
+}
+
+.send-message input[type="submit"] {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: var(--M-heading);
+  background-color: var(--HF-Text);
+  color: var(--HF-Background);
+  font-size: 16px;
+}
+
+.send-message input:required {
+  border-right: 10px solid red;
+}
+.send-message input:required:valid {
+  border-right: 10px solid green;
 }
 
 @media (max-width: 500px) {
