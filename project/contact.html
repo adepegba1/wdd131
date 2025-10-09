@@ -39,12 +39,21 @@
         </nav>
     </header>
     <main>
-        <h2>Contact Information</h2>
-        <p>Lagos Nigeria</p>
-        <p>Gmail: Adepegbadavid2@gmail.com</p>
-        <p>Phone Number: +234-813-792-4205</p>
 
-        <h2>Address</h2>
+        <h2 class="title">Contact Information</h2>
+        <div class="contact-info">
+            <img src="images/location.svg" alt="Location">
+            <p>Lagos Nigeria</p>
+        </div>
+        <div class="contact-info">
+            <img src="images/phone.svg" alt="Phone">
+            <p>+234-813-792-4205</p>
+        </div>
+        <div class="contact-info">
+            <img src="images/email.svg" alt="Email">
+            <p>adepegbadavid2@gmail.com</p>
+        </div>
+        <h2 class="title">Address</h2>
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.833034596027!2d3.2585778739933713!3d6.54275729345011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b851555555555%3A0xcf92e2880ddb2138!2sAso%20Rock%20Hotel!5e0!3m2!1sen!2sng!4v1759929206682!5m2!1sen!2sng"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -53,14 +62,14 @@
             <fieldset>
                 <legend>Send a Message</legend>
                 <label for="name">Full Name*</label>
-                <input type="text" name="name" id="name" required>
+                <input type="text" name="name" id="name" required placeholder="John Smith">
 
                 <label for="email">Email*</label>
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" id="email" required placeholder="johnsmith@gmail.com">
 
                 <label for="subject">Subject of the message</label>
                 <select name="subject" id="subject">
-                    <option value="" disabled selected>select option</option>
+                    <option value="" disabled selected>Select Option</option>
                 </select>
                 <label for="message">Message:</label>
                 <textarea name="message" id="message" rows="5"></textarea>

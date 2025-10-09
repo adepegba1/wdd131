@@ -57,12 +57,14 @@
   padding: 20px;
 }
 
-/* ===== MAIN CONTENT ====== */
+/* ===== INDEXCONTENT ====== */
 main {
   background-color: var(--Main-Background);
   color: var(--M-Text);
 }
-
+#mobile {
+  display: none;
+}
 .introduction-content {
   display: flex;
 }
@@ -78,7 +80,7 @@ main {
   gap: 10px;
   padding: 5px;
 }
-.about-me h2,
+h2,
 h3 {
   text-align: center;
   font-family: var(--M-heading);
@@ -125,6 +127,18 @@ footer {
 
 /* ====== CONTACT PAGE =====  */
 
+.title {
+  text-align: left;
+}
+.contact-info img {
+  width: 20px;
+}
+.contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .send-message fieldset {
   font-family: var(--M-heading);
   margin: 2rem 0;
@@ -148,6 +162,7 @@ footer {
   padding: 10px;
   font-family: var(--M-paragraph);
   font-size: 16px;
+  margin: 0;
 }
 
 .send-message input[type="submit"] {
@@ -161,6 +176,7 @@ footer {
   background-color: var(--HF-Text);
   color: var(--HF-Background);
   font-size: 16px;
+  cursor: pointer;
 }
 
 .send-message input:required {
@@ -184,6 +200,7 @@ footer {
   width: 100%;
   justify-content: center;
   padding: 0;
+  border-radius: 6px;
 }
 
 .project a {
@@ -196,14 +213,14 @@ footer {
   display: block;
   width: fit-content;
   text-decoration: none;
-  margin-left: 50%;
+  margin: 0 auto;
 }
 .project a:hover {
   color: var(--Main-Background);
   background-color: var(--M-Text);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 740px) {
   .about-me {
     display: flex;
     flex-direction: column;
@@ -213,5 +230,32 @@ footer {
   }
   .introduction-content img {
     display: none;
+  }
+  footer {
+    flex-direction: column;
+  }
+  #mobile {
+    display: block;
+    border-radius: 50%;
+    width: 200px;
+    margin: 0 25%;
+  }
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+  .project {
+    display: block;
+    position: relative;
+  }
+  .project h3 {
+    text-align: left;
+  }
+  .project img {
+    width: 200px;
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    overflow: auto;
   }
 }
