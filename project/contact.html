@@ -26,10 +26,10 @@
 <body>
     <header class="header">
         <div class="logo">
-            <img src="images/logo.svg" alt="Logo">
+            <img src="images/logo.svg" alt="Logo" loading="lazy">
             <h1>Adepegba<br>David</h1>
         </div>
-        <button id="menu"></button>
+        <button id="menu" aria-label="Toggle navigation"></button>
         <nav>
             <ul class="navigation">
                 <li><a href="index.html">Home</a></li>
@@ -43,15 +43,15 @@
 
         <h2 class="title">Contact Information</h2>
         <div class="contact-info">
-            <img src="images/location.svg" alt="Location">
+            <img src="images/location.svg" alt="Location" loading="lazy">
             <p>Lagos Nigeria</p>
         </div>
         <div class="contact-info">
-            <img src="images/phone.svg" alt="Phone">
+            <img src="images/phone.svg" alt="Phone" loading="lazy">
             <p>+234-813-792-4205</p>
         </div>
         <div class="contact-info">
-            <img src="images/email.svg" alt="Email">
+            <img src="images/email.svg" alt="Email" loading="lazy">
             <p>adepegbadavid2@gmail.com</p>
         </div>
         <h2 class="title">Address</h2>
@@ -68,12 +68,12 @@
                 <label for="email">Email*</label>
                 <input type="email" name="email" id="email" required placeholder="johnsmith@gmail.com">
 
-                <label for="subject">Subject of the message</label>
-                <select name="subject" id="subject">
+                <label for="subject">Subject of the message*</label>
+                <select name="subject" id="subject" required>
                     <option value="" disabled selected>Select Option</option>
                 </select>
-                <label for="message">Message:</label>
-                <textarea name="message" id="message" rows="5"></textarea>
+                <label for="message">Message*</label>
+                <textarea name="message" id="message" rows="5" required></textarea>
 
                 <input type="submit" value="Send Message">
 
@@ -87,11 +87,34 @@
         </div>
         <div class="social-media">
             <a href="https://www.linkedin.com/in/adepegbadavid1" target="_blank"><img src="images/linkedin.svg"
-                    alt="Linkedin"></a>
-            <a href="https://github.com/adepegba1" target="_blank"><img src="images/github.svg" alt="GitHub"></a>
-            <a href="https://www.x.com/adepegbadavid1" target="_blank"><img src="images/twitter.svg" alt="X"></a>
+                    alt="Linkedin" loading="lazy"></a>
+            <a href="https://github.com/adepegba1" target="_blank"><img src="images/github.svg" alt="GitHub"
+                    loading="lazy"></a>
+            <a href="https://www.x.com/adepegbadavid1" target="_blank"><img src="images/twitter.svg" alt="X"
+                    loading="lazy"></a>
         </div>
     </footer>
+    <script>
+        const form = document.querySelector(".send-message");
+
+        if (form) {
+            form.addEventListener("submit", (event) => {
+                event.preventDefault(); // prevent page reload
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const message = document.getElementById("message").value;
+                const subject = document.getElementById("subject").value;
+
+                localStorage.setItem("userName", name);
+                localStorage.setItem("userEmail", email);
+                localStorage.setItem("subject", subject);
+                localStorage.setItem("message", message);
+
+                alert(`Thank you, ${name}! Your message has been saved.`);
+            });
+        }
+
+    </script>
 </body>
 
 </html>

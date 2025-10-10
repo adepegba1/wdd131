@@ -18,7 +18,7 @@ document.getElementById(
 
 subjects = {
   sql: "SQL",
-  excel: "Mircosoft Excel",
+  excel: "Microsoft Excel",
   powerBi: "Power Bi",
   python: "Python",
 };
