@@ -12,12 +12,16 @@
     "Lucida Grande", "Lucida Sans Unicode";
 }
 * {
-  margin: 0;
-  padding: 5px;
+  margin: 0 5px;
+  padding: 0;
   line-height: 1.5;
+  box-sizing: border-box;
 }
 
 /* ===== HEADER ===== */
+#menu {
+  display: none; /* hide hamburger button */
+}
 .header {
   display: flex;
   text-transform: uppercase;
@@ -28,22 +32,24 @@
 .header h1 {
   font-family: var(--HF-heading);
   color: var(--HF-Text);
+  font-size: 5vh;
 }
 .header img {
-  width: 100px;
+  max-width: 70px;
   height: auto;
+  width: 100%;
 }
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .navigation {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  gap: 70px;
   list-style: none;
+  gap: 70px;
 }
 .navigation a {
   text-decoration: none;
@@ -54,38 +60,30 @@
 .navigation a:hover {
   color: var(--Main-Background);
   background-color: var(--M-Text);
-  padding: 20px;
+  padding: 10%;
 }
 
-/* ===== INDEXCONTENT ====== */
 main {
   background-color: var(--Main-Background);
   color: var(--M-Text);
 }
-#mobile {
-  display: none;
-}
-.introduction-content {
-  display: flex;
-}
-.introduction-content img {
-  width: 200px;
+/* ===== INDEX CONTENT ====== */
+
+#intro img {
+  float: right;
+  max-width: 300px;
   height: auto;
   border-radius: 50%;
 }
 
-.introduction {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 5px;
+p,
+ul {
+  font-size: 3vh;
 }
+
 h2,
 h3 {
   text-align: center;
-  font-family: var(--M-heading);
-}
-h2 {
   font-family: var(--M-heading);
 }
 section {
@@ -129,6 +127,7 @@ footer {
 
 .title {
   text-align: left;
+  padding-top: 20px;
 }
 .contact-info img {
   width: 20px;
@@ -141,7 +140,6 @@ footer {
 
 .send-message fieldset {
   font-family: var(--M-heading);
-  margin: 2rem 0;
   border-radius: 6px;
   padding: 0.5rem 2%;
   border: 1px solid black;
@@ -189,38 +187,37 @@ footer {
 /* ===== PROJECT PAGE ====== */
 
 .project {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  margin-top: 30px;
 }
 .project h3 {
-  grid-column: 1 / span 2;
-  padding-top: 20px;
+  text-align: left;
 }
 .project img {
+  float: right;
+  padding-left: 10px;
+  margin-top: 5px;
+  max-width: 300px;
+  height: auto;
   width: 100%;
-  justify-content: center;
-  padding: 0;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 
 .project a {
-  padding: 10px;
-  border-radius: 5px;
-  font-family: var(--M-heading);
-  background-color: var(--HF-Text);
-  color: var(--HF-Background);
-  font-size: 16px;
-  display: block;
-  width: fit-content;
   text-decoration: none;
-  margin: 0 auto;
+  text-transform: capitalize;
+  background-color: var(--HF-Background);
+  color: var(--HF-Text);
+  padding: 5px;
 }
 .project a:hover {
   color: var(--Main-Background);
   background-color: var(--M-Text);
 }
 
-@media (max-width: 740px) {
+@media (max-width: 768px) {
+  html {
+    margin: auto;
+  }
   .about-me {
     display: flex;
     flex-direction: column;
@@ -228,34 +225,36 @@ footer {
   .navigation {
     display: none;
   }
-  .introduction-content img {
-    display: none;
-  }
   footer {
     flex-direction: column;
   }
-  #mobile {
-    display: block;
-    border-radius: 50%;
-    width: 200px;
-    margin: 0 25%;
-  }
+
   iframe {
     width: 100%;
     height: auto;
   }
-  .project {
-    display: block;
-    position: relative;
-  }
-  .project h3 {
-    text-align: left;
-  }
-  .project img {
-    width: 200px;
+
+  #menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #000;
     position: absolute;
-    right: 10px;
-    top: 60px;
-    overflow: auto;
+    top: 0;
+    right: 0;
+    display: block;
+  }
+
+  #menu::before {
+    content: "☰";
+  }
+
+  #menu.open::before {
+    content: "❌";
+  }
+  nav ul.navigation.open {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
   }
 }
